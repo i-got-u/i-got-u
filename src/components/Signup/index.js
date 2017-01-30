@@ -1,11 +1,12 @@
 import React , { Component } from 'react'
 import { View, StyleSheet, Alert,  AsyncStorage, } from 'react-native'
 import { Container, Content, Title, Text, Header, InputGroup, Input, Icon, Button } from 'native-base'
-const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 import bcrypt from 'react-native-bcrypt'
 import uuid from 'uuid'
 import RSAKey from 'react-native-rsa'
 import {RSA_SECRET,RSA_BITS} from 'react-native-dotenv'
+
+const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 const rsa = new RSAKey()
 

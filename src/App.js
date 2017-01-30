@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import Signup from './components/Signup/'
 import Main from './components/Main/'
+import Login from './components/Login/'
 
 export default class App extends Component {
    renderComponent (route, navigator) {
@@ -16,6 +17,10 @@ export default class App extends Component {
     if (route.name === 'main') {
       return <Main navigator={navigator}/>
     }  
+    if (route.name === 'login') {
+      return <Login navigator={navigator}/>
+    }  
+
   }
 
 

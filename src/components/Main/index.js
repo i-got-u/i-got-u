@@ -1,8 +1,8 @@
-import React ,{Component} from 'react'
-import {View, StyleSheet, BackAndroid} from 'react-native'
-import {Container,Content, Text, Button,Header,Title} from 'native-base'
+import React , { Component } from 'react'
+import { View, StyleSheet, BackAndroid } from 'react-native'
+import { Container, Content, Text, Button, Header, Title } from 'native-base'
 export default class Main extends Component {
-    buttonHandle (e) {
+  buttonHandle (e) {
     this.props.navigator.push({
       name: e
     })
@@ -17,29 +17,42 @@ export default class Main extends Component {
       }
     })
   }
-    render(){
-        return (<Container style={style.Container}>
-        <Header>
-        <Title>
-        Main Activity
-        </Title>
-        </Header>
-        <Content style={style.Content}>
-       <Button block primary style={style.buttons}> Login </Button>
-                    <Button block warning style={style.buttons} onPress={this.buttonHandle.bind(this, 'signup')}> Signup </Button>
-         </Content></Container>)
-    }
+  render () {
+    return (<Container style={style.Container}>
+              <Header>
+                <Title>
+                  Main Activity
+                </Title>
+              </Header>
+              <Content style={style.Content}>
+                <Button
+                  block
+                  primary
+                  style={style.buttons}
+                  onPress={this.buttonHandle.bind(this, 'login')}>
+                  Login
+                </Button>
+                <Button
+                  block
+                  warning
+                  style={style.buttons}
+                  onPress={this.buttonHandle.bind(this, 'signup')}>
+                  Signup
+                </Button>
+              </Content>
+            </Container>)
+  }
 }
 
 const style = StyleSheet.create({
- Container : {
+  Container: {
     backgroundColor: 'white'
 
- },
- Content:{
-     padding:10
- },
- buttons: {
-     marginTop:50
- }
+  },
+  Content: {
+    padding: 10
+  },
+  buttons: {
+    marginTop: 50
+  }
 })
